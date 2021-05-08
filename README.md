@@ -56,8 +56,6 @@ After installation, use `Document -> Style -> Add package` to add the package
   using `<if|<greater|outer-margin|1l>|<move|wide figure here||some distance 
   to the left>>`, but it seems like the box lengths are not available inside 
   the conditional.
-  * `marginal-note` and `marginal-note*` should use the standard way of 
-  switching between them with `Focus -> Numbered`.
   * Probably more.
 
 # License

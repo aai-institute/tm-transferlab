@@ -12,7 +12,14 @@
 
 (texmacs-module (transferlab))
 
-(define-alternate marginal-note marginal-note*)
+(define-group marginal-note-tag
+  marginal-note marginal-note*)
+
+(define-group numbered-tag
+  marginal-note)
+
+(define-group big-figure-tag
+  wide-figure)
 
 (tm-define (make-marginal-note*)
   (:synopsis "Insert an unnumbered marginal note.")
