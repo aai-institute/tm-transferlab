@@ -14,10 +14,9 @@
 (plugin-configure transferlab
   (:require #t))
 
-(lazy-menu (transferlab) marginal-note*-menu)
-
-(delayed
-  (:idle 1)
-  (menu-bind note-menu
-    (link marginal-note*-menu)
-    (former)))
+(when (supports-transferlab?)
+  (import-from (transferlab))
+  (delayed (:idle 1)
+    (menu-bind note-menu
+      (link marginal-note*-menu)
+      (former))))
