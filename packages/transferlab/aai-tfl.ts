@@ -113,28 +113,37 @@
 
   <assign|wide-figure-width|<plus|<value|par-width>|<value|marginal-note-sep>|<value|marginal-note-width>>>
 
-  <assign|wide-figure-inner|<\macro|body|caption>
+  <assign|wide-figure-inner|<\macro|body|caption|lead>
     <\tabular>
       <tformat|<cwith|2|2|1|1|cell-tsep|0>|<cwith|2|2|1|1|cell-bsep|0>|<cwith|2|2|1|1|cell-hpart|0>|<cwith|2|2|1|1|cell-vmode|exact>|<cwith|2|2|1|1|cell-height|0.8em>|<cwith|3|3|1|1|cell-hyphen|t>|<cwith|1|1|1|1|cell-halign|c>|<twith|table-lsep|0>|<twith|table-rsep|0>|<twith|table-tsep|<value|wide-figure-top-sep>>|<twith|table-bsep|<value|wide-figure-bot-sep>>|<twith|table-width|<value|wide-figure-width>>|<twith|table-hmode|exact>|<table|<row|<cell|<arg|body>>>|<row|<cell|>>|<row|<\cell>
-        <html-div-class|caption|<surround|<figure-name|<figure-text>
-        <the-figure><figure-sep>><list-caption|big-figure|<arg|caption>>||<small|<arg|caption>>>>
+        <html-div-class|caption|<surround|<figure-name|<figure-text><arg|lead><figure-sep>><list-caption|big-figure|<arg|caption>>||<small|<arg|caption>>>>
       </cell>>>>
     </tabular>
   </macro>>
 
-  <assign|wide-figure-even|<\macro|body|caption>
-    <move|<wide-figure-inner|<arg|body>|<arg|caption>>|<minus|<value|marginal-note-total>>|>
+  <assign|wide-figure-even|<\macro|body|caption|lead>
+    <move|<wide-figure-inner|<arg|body>|<arg|caption>|<arg|lead>>|<minus|<value|marginal-note-total>>|>
   </macro>>
 
-  <assign|wide-figure-odd|<\macro|body|caption>
-    <wide-figure-inner|<arg|body>|<arg|caption>>
+  <assign|wide-figure-odd|<\macro|body|caption|lead>
+    <wide-figure-inner|<arg|body>|<arg|caption>|<arg|lead>>
   </macro>>
 
   <assign|wide-figure|<\macro|body|caption>
     <\surround|<no-indent><inc-figure>|>
-      <specific|even|<wide-figure-even|<arg|body>|<arg|caption>>><specific|odd|<wide-figure-odd|<arg|body>|<arg|caption>>><vphantom|<wide-figure-inner|<arg|body>|<arg|caption>>>
+      <specific|even|<wide-figure-even|<arg|body>|<arg|caption>|
+      <the-figure>>><specific|odd|<wide-figure-odd|<arg|body>|<arg|caption>|
+      <the-figure>>><vphantom|<wide-figure-inner|<arg|body>|<arg|caption>|>>
     </surround>
   </macro>>
+
+  <assign|wide-figure*|<\macro|body|caption>
+    <\surround|<no-indent>|>
+      <specific|even|<wide-figure-even|<arg|body>|<arg|caption>|>><specific|odd|<wide-figure-odd|<arg|body>|<arg|caption>|>><vphantom|<wide-figure-inner|<arg|body>|<arg|caption>|>>
+    </surround>
+  </macro>>
+
+  \;
 </body>
 
 <\initial>
