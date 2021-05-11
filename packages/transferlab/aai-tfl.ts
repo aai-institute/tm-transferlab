@@ -32,6 +32,8 @@
 
   <assign|transferlab-logo|<macro|width|<image|local:$TEXMACS_HOME_PATH/plugins/transferlab/packages/transferlab/transferlab.eps|<arg|width>|||>>>
 
+  <assign|appliedai-logo|<macro|width|<image|local:$TEXMACS_HOME_PATH/plugins/transferlab/packages/transferlab/appliedai-pantone-positive-uncoated.pdf|<arg|width>|||>>>
+
   \;
 
   <assign|info-flag|detailed>
@@ -61,6 +63,14 @@
   <assign|font-base-size|11pt>
 
   <assign|math-font|math-dejavu>
+
+  <assign|locus-color|#00747b>
+
+  <assign|visited-color|#00747b>
+
+  \;
+
+  <assign|dfn|<macro|body|<strong|<arg|body>>>>
 
   <\active*>
     <\src-comment>
@@ -97,9 +107,11 @@
     <surround|<marginal-note*|normal|b|<html-div-class|caption|<surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>||<arg|cap>>>>||<center|<arg|fig>>>
   </macro>>
 
-  <assign|doc-title|<macro|x|<\surround|<marginal-note*|normal|b|<shift|<transferlab-logo|180pt>|-5mm|2cm>>|<vspace|0.5fn>>
+  <assign|doc-title|<macro|x|<\surround|<marginal-note*|normal|b|<shift|<appliedai-logo|200pt>|-5mm|15mm>>|<vspace|0.5fn>>
     <doc-title-block|<font-magnify|1.412|<with|font-family|ss|font-series|bold|<arg|x>>>>
   </surround>>>
+
+  <assign|dfn*|<macro|body|<dfn|<arg|body>><marginal-note*|normal|c|<em|<arg|body>>>>>
 
   <\active*>
     <\src-comment>
