@@ -30,9 +30,9 @@
     </src-comment>
   </active*>
 
-  <assign|transferlab-logo|<macro|width|<image|local:$TEXMACS_HOME_PATH/plugins/transferlab/packages/transferlab/transferlab.eps|<arg|width>|||>>>
+  <assign|transferlab-logo|<macro|width|<image|<find-file|$TEXMACS_HOME_PATH/plugins/transferlab/packages/transferlab/transferlab.eps>|<arg|width>|||>>>
 
-  <assign|appliedai-logo|<macro|width|<image|local:$TEXMACS_HOME_PATH/plugins/transferlab/packages/transferlab/appliedai-pantone-positive-uncoated.pdf|<arg|width>|||>>>
+  <assign|appliedai-logo|<macro|width|<image|<find-file|$TEXMACS_HOME_PATH/plugins/transferlab/packages/transferlab/appliedai-pantone-positive-uncoated.pdf>|<arg|width>|||>>>
 
   \;
 
