@@ -4,7 +4,7 @@
 
 <\body>
   <active*|<\src-title>
-    <src-package|aai-tfl|0.1>
+    <src-package|aai-tfl|0.2>
 
     <\src-purpose>
       A bare-bones tufte-like style for appliedAI's TransferLab
@@ -155,7 +155,16 @@
     </surround>
   </macro>>
 
-  \;
+  <\active*>
+    <\src-comment>
+      Marginal figures
+    </src-comment>
+  </active*>
+
+  <assign|marginal-figure|<macro|vpos|body|caption|<surround|<compound|next-figure>||<marginal-note*|normal|<arg|vpos>|<render-small-figure|figure|<compound|figure-text>
+  <compound|the-figure>|<arg|body>|<surround|<set-binding|<compound|the-figure>>||<arg|caption>>>>>>>
+
+  <assign|marginal-figure*|<macro|vpos|body|caption|<marginal-note*|normal|<arg|vpos>|<with|figure-sep||<render-small-figure|||<arg|body>|<arg|caption>>>>>>
 </body>
 
 <\initial>

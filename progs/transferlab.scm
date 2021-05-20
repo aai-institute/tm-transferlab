@@ -21,6 +21,9 @@
 (define-group big-figure-tag
   wide-figure)
 
+(define-group small-figure-tag
+  marginal-figure)
+
 (tm-define (make-marginal-note*)
   (:synopsis "Insert an unnumbered marginal note.")
   (wrap-selection-small
