@@ -4,7 +4,7 @@
 
 <\body>
   <active*|<\src-title>
-    <src-package|aai-tfl|0.1>
+    <src-package|aai-tfl|0.3>
 
     <\src-purpose>
       A bare-bones tufte-like style for appliedAI's TransferLab
@@ -119,9 +119,9 @@
     </src-comment>
   </active*>
 
-  <assign|wide-figure-top-sep|1.2fn>
+  <assign|wide-figure-top-sep|1.5fn>
 
-  <assign|wide-figure-bot-sep|1.3fn>
+  <assign|wide-figure-bot-sep|1.7fn>
 
   <assign|wide-figure-width|<plus|<value|par-width>|<value|marginal-note-sep>|<value|marginal-note-width>>>
 
@@ -155,7 +155,24 @@
     </surround>
   </macro>>
 
-  \;
+  <\active*>
+    <\src-comment>
+      Marginal figures
+    </src-comment>
+  </active*>
+
+  <assign|render-marginal-figure|<macro|type|name|fig|cap|<tabular*|<tformat|<cwith|1|-1|1|-1|cell-lsep|0spc>|<cwith|1|-1|1|-1|cell-rsep|0spc>|<cwith|2|2|1|1|cell-height|0.5fn>|<twith|table-valign|B>|<cwith|3|3|1|1|cell-hyphen|t>|<twith|table-width|50mm>|<twith|table-hmode|min>|<cwith|1|1|1|1|cell-halign|c>|<cwith|1|1|1|1|cell-lsep|0spc>|<cwith|1|1|1|1|cell-rsep|0spc>|<table|<row|<cell|<arg|fig>>>|<row|<cell|>>|<row|<\cell>
+    <\html-div-class|caption>
+      <small|<\surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>|>
+        <arg|cap>
+      </surround>>
+    </html-div-class>
+  </cell>>>>>>>
+
+  <assign|marginal-figure|<macro|vpos|body|caption|<surround|<compound|next-figure>||<marginal-note*|normal|<arg|vpos>|<render-marginal-figure|figure|<compound|figure-text>
+  <compound|the-figure>|<arg|body>|<surround|<set-binding|<compound|the-figure>>||<arg|caption>>>>>>>
+
+  <assign|marginal-figure*|<macro|vpos|body|caption|<marginal-note*|normal|<arg|vpos>|<with|figure-sep||<render-marginal-figure||<arg|body>|<arg|caption>>>>>>
 </body>
 
 <\initial>
