@@ -104,7 +104,7 @@
   </active*>
 
   <assign|render-big-figure|<\macro|type|name|fig|cap>
-    <surround|<marginal-note*|normal|b|<html-div-class|caption|<surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>||<arg|cap>>>>||<center|<arg|fig>>>
+    <surround|<marginal-note*|normal|c|<html-div-class|caption|<surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>||<arg|cap>>>>||<center|<arg|fig>>>
   </macro>>
 
   <assign|doc-title|<macro|x|<\surround|<marginal-note*|normal|b|<shift|<appliedai-logo|200pt>|-5mm|15mm>>|<vspace|0.5fn>>
