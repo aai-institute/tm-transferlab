@@ -56,16 +56,22 @@
 (tm-define (replace-tags what by)
   (tree-replace (buffer-tree) what by))
 
-;(tm-define (make-marginal-note*)
-;  (:synopsis "Insert an unnumbered marginal note.")
-;  (wrap-selection-small
-;    (insert-go-to `(inactive (marginal-note* "normal" "c" "")) '(0 2 0))))
+(tm-define (make-marginal-figure)
+  (:synopsis "Insert a numbered marginal figure.")
+  (wrap-selection-small
+    (insert-go-to `(inactive (marginal-figure "c" "" "")) '(0 1 0))))
 
-;(menu-bind marginal-note*-menu
-;  (when (and (has-style-package? "aai-tfl")
-;             (not (or (inside? 'float) (inside? 'footnote)
-;                      (inside? 'marginal-note) (inside? 'marginal-note*)))
-;             (in-main-flow?)
-;             (not (selection-active-non-small?)))
-;    ("Unnumbered marginal note" (make-marginal-note*))))
+(tm-define (make-wide-figure)
+  (:synopsis "Insert a numbered wide figure.")
+  (wrap-selection-small
+    (insert-go-to `(document "" (inactive (wide-figure "" "")) "") '(1 0 0 0))))
+
+(menu-bind tfl-figures-menu
+  (when (and (has-style-package? "aai-tfl")
+             (not (or (inside? 'float) (inside? 'footnote)
+                      (inside? 'marginal-note) (inside? 'marginal-note*)))
+             (in-main-flow?)
+             (not (selection-active-non-small?)))
+    ("Marginal figure" (make-marginal-figure))
+    ("Wide figure" (make-wide-figure))))
 

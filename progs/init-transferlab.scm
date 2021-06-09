@@ -15,4 +15,8 @@
   (:require #t))
 
 (when (supports-transferlab?)
-  (import-from (transferlab)))
+  (import-from (transferlab))
+  (delayed (:idle 1)
+    (menu-bind insert-image-menu
+      (link tfl-figures-menu)
+      (former))))
