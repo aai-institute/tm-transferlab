@@ -172,7 +172,8 @@
   <assign|marginal-figure|<macro|vpos|body|caption|<surround|<compound|next-figure>||<marginal-note*|normal|<arg|vpos>|<render-marginal-figure|figure|<compound|figure-text>
   <compound|the-figure>|<arg|body>|<surround|<set-binding|<compound|the-figure>>||<arg|caption>>>>>>>
 
-  <assign|marginal-figure*|<macro|vpos|body|caption|<marginal-note*|normal|<arg|vpos>|<with|figure-sep||<render-marginal-figure||<arg|body>|<arg|caption>>>>>>
+  <assign|marginal-figure*|<macro|vpos|body|caption|<marginal-note*|normal|<arg|vpos>|<with|figure-sep||<render-marginal-figure||<compound|figure-text>.
+  |<arg|body>|<arg|caption>>>>>>
 </body>
 
 <\initial>
