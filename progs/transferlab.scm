@@ -24,10 +24,8 @@
 (define-group small-figure-tag
   marginal-figure)
 
-(tm-define (make-marginal-note*)
-  (:synopsis "Insert an unnumbered marginal note.")
-  (wrap-selection-small
-    (insert-go-to `(inactive (marginal-note* "normal" "c" "")) '(0 2 0))))
+(tm-define (marginal-note-context? t)
+  (tree-in? t '(marginal-note marginal-note*)))
 
 (define (in-marginal-note?)
   (or (tree-innermost 'marginal-note #t) (tree-innermost 'marginal-note* #t)))
@@ -58,11 +56,16 @@
 (tm-define (replace-tags what by)
   (tree-replace (buffer-tree) what by))
 
-(menu-bind marginal-note*-menu
-  (when (and (has-style-package? "aai-tfl")
-             (not (or (inside? 'float) (inside? 'footnote)
-                      (inside? 'marginal-note) (inside? 'marginal-note*)))
-             (in-main-flow?)
-             (not (selection-active-non-small?)))
-    ("Unnumbered marginal note" (make-marginal-note*))))
+;(tm-define (make-marginal-note*)
+;  (:synopsis "Insert an unnumbered marginal note.")
+;  (wrap-selection-small
+;    (insert-go-to `(inactive (marginal-note* "normal" "c" "")) '(0 2 0))))
+
+;(menu-bind marginal-note*-menu
+;  (when (and (has-style-package? "aai-tfl")
+;             (not (or (inside? 'float) (inside? 'footnote)
+;                      (inside? 'marginal-note) (inside? 'marginal-note*)))
+;             (in-main-flow?)
+;             (not (selection-active-non-small?)))
+;    ("Unnumbered marginal note" (make-marginal-note*))))
 

@@ -15,8 +15,4 @@
   (:require #t))
 
 (when (supports-transferlab?)
-  (import-from (transferlab))
-  (delayed (:idle 1)
-    (menu-bind note-menu
-      (link marginal-note*-menu)
-      (former))))
+  (import-from (transferlab)))
