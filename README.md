@@ -13,7 +13,6 @@ git clone https://github.com/texmacs/transferlab.git
 ~/.TeXmacs/plugins/transferlab
 ```
 
-
 For Windows, the path (usually?) is
 
 ```shell
@@ -37,8 +36,13 @@ After installation, use `Document -> Style -> Add package` to add the package
   * Macros and accompanying scheme code for numbered marginal notes. When using 
   the package, `marginal-note` is numbered and `marginal-note*` unnumbered. 
   They are variants from each other so it is possible to switch easily.
+  * Macros for figures completely contained in the margin: `marginal-figure` and 
+  `marginal-figure*`.
+  * Placement of captions in the margin for the standard `big-figure` and 
+  `big-figure*`.
   * A `wide-figure` macro extending beyond the body of the text to occupy the 
-  full width of the page, minus the exterior margins.
+  full width of the page, minus the exterior margins, and an unnumbered 
+  `wide-figure*` variant.
 
 # Known issues
 
@@ -53,10 +57,11 @@ After installation, use `Document -> Style -> Add package` to add the package
   the distance to the side of the page. Recall that, during the evaluation of 
   delta-x and delta-y in `<move|content|delta-x|delta-y>`, the box lengths `w`, 
   `h`, `l`, `r`, `b` and `t` of content are defined. So one could think of 
-  using `<if|<greater|outer-margin|1l>|<move|wide figure here||some distance 
-  to the left>>`, but it seems like the box lengths are not available inside 
+  using `<if|`<greater|outer-margin|1l>`|`<move|wide figure here||some distance 
+  to the left>`>`, but it seems like the box lengths are not available inside 
   the conditional.
-  * Probably more.
+  * Probably more. Issues and PRs in the 
+  [GitHub](https://github.com/appliedAI-Initiative/tm-transferlab) repository.
 
 # License
 

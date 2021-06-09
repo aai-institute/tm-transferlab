@@ -51,8 +51,15 @@
     <markup|marginal-note*> unnumbered. They are variants from each other so
     it is possible to switch easily.
 
+    <item>Macros for figures completely contained in the margin:
+    <markup|marginal-figure> and <markup|marginal-figure*>.
+
+    <item>Placement of captions in the margin for the standard
+    <markup|big-figure> and <markup|big-figure*>.
+
     <item>A <markup|wide-figure> macro extending beyond the body of the text
-    to occupy the full width of the page, minus the exterior margins.
+    to occupy the full width of the page, minus the exterior margins, and an
+    unnumbered <markup|wide-figure*> variant.
   </itemize-dot>
 
   <section|Known issues>
@@ -78,10 +85,9 @@
     figure here||some distance to the left>>, but it seems like the box
     lengths are not available inside the conditional.
 
-    <item><markup|marginal-note> and <markup|marginal-note*> should use the
-    standard way of switching between them with <menu|Focus|Numbered>.
-
-    <item>Probably more.
+    <item>Probably more. Issues and PRs in the
+    <hlink|GitHub|https://github.com/appliedAI-Initiative/tm-transferlab>
+    repository.
   </itemize-dot>
 
   <section|License>
