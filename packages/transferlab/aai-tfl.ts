@@ -4,7 +4,7 @@
 
 <\body>
   <active*|<\src-title>
-    <src-package|aai-tfl|0.3>
+    <src-package|aai-tfl|0.4>
 
     <\src-purpose>
       A bare-bones tufte-like style for appliedAI's TransferLab
