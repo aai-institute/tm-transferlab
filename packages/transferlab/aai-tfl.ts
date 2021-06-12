@@ -26,7 +26,7 @@
 
       All pages have 25mm margins at both side. Odd pages have an additional
       75mm to the right and even pages to the left. This extra space is used
-      by marginal notes.
+      by marginal notes and figures.
     </src-comment>
   </active*>
 
@@ -60,7 +60,7 @@
 
   <assign|page-odd-footer|<move|<transferlab-logo|110pt>|400pt|>>
 
-  <assign|font-base-size|11pt>
+  <assign|font-base-size|11>
 
   <assign|math-font|math-dejavu>
 
@@ -104,7 +104,7 @@
   </active*>
 
   <assign|render-big-figure|<\macro|type|name|fig|cap>
-    <surround|<marginal-note*|normal|c|<html-div-class|caption|<surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>||<arg|cap>>>>||<center|<arg|fig>>>
+    <surround|<vspace*|1.5bls><marginal-note*|normal|c|<small|<html-div-class|caption|<surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>||<arg|cap>>>>>|<vspace|1.8bls>|<center|<arg|fig>>>
   </macro>>
 
   <assign|doc-title|<macro|x|<\surround|<marginal-note*|normal|b|<shift|<appliedai-logo|200pt>|-5mm|15mm>>|<vspace|0.5fn>>
