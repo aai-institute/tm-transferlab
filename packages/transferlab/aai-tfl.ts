@@ -4,7 +4,7 @@
 
 <\body>
   <active*|<\src-title>
-    <src-package|aai-tfl|0.4>
+    <src-package|aai-tfl|0.5>
 
     <\src-purpose>
       A bare-bones tufte-like style for appliedAI's TransferLab
@@ -66,6 +66,10 @@
 
   <assign|marginal-note-width|48mm>
 
+  <assign|figure-top-sep|1.5bls>
+
+  <assign|figure-bot-sep|1.7bls>
+
   <assign|page-odd-footer|<move|<transferlab-logo|120pt>|380pt|>>
 
   <assign|font-base-size|11>
@@ -108,7 +112,7 @@
   </active*>
 
   <assign|render-big-figure|<\macro|type|name|fig|cap>
-    <surround|<vspace*|1.5bls><marginal-note*|normal|c|<small|<html-div-class|caption|<surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>||<arg|cap>>>>>|<vspace|1.8bls>|<center|<arg|fig>>>
+    <surround|<vspace*|<value|figure-top-sep>><marginal-note*|normal|c|<small|<html-div-class|caption|<surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>||<arg|cap>>>>>|<vspace|<value|figure-bot-sep>>|<center|<arg|fig>>>
   </macro>>
 
   <assign|doc-title|<macro|x|<\surround|<marginal-note*|normal|b|<shift|<appliedai-logo|200pt>|-7.5mm|10mm>>|<vspace|0.5fn>>
@@ -123,15 +127,11 @@
     </src-comment>
   </active*>
 
-  <assign|wide-figure-top-sep|1.5fn>
-
-  <assign|wide-figure-bot-sep|1.7fn>
-
   <assign|wide-figure-width|<plus|<value|par-width>|<value|marginal-note-sep>|<value|marginal-note-width>>>
 
   <assign|wide-figure-inner|<\macro|body|caption|lead>
     <\tabular>
-      <tformat|<cwith|2|2|1|1|cell-tsep|0>|<cwith|2|2|1|1|cell-bsep|0>|<cwith|2|2|1|1|cell-hpart|0>|<cwith|2|2|1|1|cell-vmode|exact>|<cwith|2|2|1|1|cell-height|0.8em>|<cwith|3|3|1|1|cell-hyphen|t>|<cwith|1|1|1|1|cell-halign|c>|<twith|table-lsep|0>|<twith|table-rsep|0>|<twith|table-tsep|<value|wide-figure-top-sep>>|<twith|table-bsep|<value|wide-figure-bot-sep>>|<twith|table-width|<value|wide-figure-width>>|<twith|table-hmode|exact>|<table|<row|<cell|<arg|body>>>|<row|<cell|>>|<row|<\cell>
+      <tformat|<cwith|2|2|1|1|cell-tsep|0>|<cwith|2|2|1|1|cell-bsep|0>|<cwith|2|2|1|1|cell-hpart|0>|<cwith|2|2|1|1|cell-vmode|exact>|<cwith|2|2|1|1|cell-height|0.8em>|<cwith|3|3|1|1|cell-hyphen|t>|<cwith|1|1|1|1|cell-halign|c>|<twith|table-lsep|0>|<twith|table-rsep|0>|<twith|table-tsep|<value|figure-top-sep>>|<twith|table-bsep|<value|figure-bot-sep>>|<twith|table-width|<value|wide-figure-width>>|<twith|table-hmode|exact>|<table|<row|<cell|<arg|body>>>|<row|<cell|>>|<row|<\cell>
         <html-div-class|caption|<surround|<figure-name|<figure-text><arg|lead><figure-sep>><list-caption|big-figure|<arg|caption>>||<small|<arg|caption>>>>
       </cell>>>>
     </tabular>
