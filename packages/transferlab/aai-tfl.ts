@@ -54,11 +54,19 @@
 
   <assign|page-even-shift|25mm>
 
+  <assign|page-top|30mm>
+
   <assign|page-bot|30mm>
+
+  <assign|page-head-sep|15mm>
 
   <assign|page-foot-sep|18mm>
 
-  <assign|page-odd-footer|<move|<transferlab-logo|110pt>|400pt|>>
+  <assign|marginal-note-sep|12mm>
+
+  <assign|marginal-note-width|48mm>
+
+  <assign|page-odd-footer|<move|<transferlab-logo|120pt>|380pt|>>
 
   <assign|font-base-size|11>
 
@@ -77,10 +85,6 @@
       Numbered marginal notes
     </src-comment>
   </active*>
-
-  <assign|marginal-note-sep|10mm>
-
-  <assign|marginal-note-width|45mm>
 
   <assign|marginal-note-total|<plus|<value|marginal-note-width>|<value|marginal-note-sep>>>
 
@@ -107,7 +111,7 @@
     <surround|<vspace*|1.5bls><marginal-note*|normal|c|<small|<html-div-class|caption|<surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>||<arg|cap>>>>>|<vspace|1.8bls>|<center|<arg|fig>>>
   </macro>>
 
-  <assign|doc-title|<macro|x|<\surround|<marginal-note*|normal|b|<shift|<appliedai-logo|200pt>|-5mm|15mm>>|<vspace|0.5fn>>
+  <assign|doc-title|<macro|x|<\surround|<marginal-note*|normal|b|<shift|<appliedai-logo|200pt>|-7.5mm|10mm>>|<vspace|0.5fn>>
     <doc-title-block|<font-magnify|1.412|<with|font-family|ss|font-series|bold|<arg|x>>>>
   </surround>>>
 
