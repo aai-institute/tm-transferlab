@@ -70,6 +70,8 @@
 
   <assign|figure-bot-sep|1.7bls>
 
+  <assign|par-par-sep|0.5fn>
+
   <assign|page-odd-footer|<move|<transferlab-logo|120pt>|380pt|>>
 
   <assign|font-base-size|11>
