@@ -1,13 +1,13 @@
-<TeXmacs|1.99.20>
+<TeXmacs|1.99.21>
 
 <style|source>
 
 <\body>
   <active*|<\src-title>
-    <src-package|aai-tfl|0.5>
+    <src-package|aai-tfl|0.6>
 
     <\src-purpose>
-      A bare-bones tufte-like style for appliedAI's TransferLab
+      A tufte-like style for appliedAI's TransferLab
     </src-purpose>
 
     <src-copyright|2021|Miguel de Benito Delgado>
@@ -19,6 +19,8 @@
       which the software. If not, see <hlink|http://www.gnu.org/licenses/gpl-3.0.html|http://www.gnu.org/licenses/gpl-3.0.html>.
     </src-license>
   </src-title>>
+
+  <use-package|acmlarge|smart-ref|preview-ref>
 
   <\active*>
     <\src-comment>
@@ -33,6 +35,10 @@
   <assign|transferlab-logo|<macro|width|<image|<find-file|$TEXMACS_HOME_PATH/plugins/transferlab/packages/transferlab/transferlab.eps>|<arg|width>|||>>>
 
   <assign|appliedai-logo|<macro|width|<image|<find-file|$TEXMACS_HOME_PATH/plugins/transferlab/packages/transferlab/appliedai-pantone-positive-uncoated.pdf>|<arg|width>|||>>>
+
+  <assign|aai-color|#00747b>
+
+  <assign|aai-color-light|#1c9b90>
 
   \;
 
@@ -66,6 +72,8 @@
 
   <assign|marginal-note-width|48mm>
 
+  <assign|marginal-figure-width|50mm>
+
   <assign|figure-top-sep|1.5bls>
 
   <assign|figure-bot-sep|1.7bls>
@@ -82,7 +90,39 @@
 
   <assign|visited-color|#00747b>
 
-  \;
+  <\active*>
+    <\src-comment>
+      Abstracts, tl;drs and other markup
+    </src-comment>
+  </active*>
+
+  <assign|render-abstract|<\macro|body>
+    <\surround|<no-indent>|>
+      <\small>
+        <em|<arg|body>>
+      </small>
+    </surround>
+  </macro>>
+
+  <assign|tldr|<macro|body|<\with|ornament-shape|classic|ornament-vpadding|2spc|ornament-hpadding|2spc|ornament-border|0.5ln|ornament-sunny-color|<value|aai-color>|ornament-shadow-color|<value|aai-color>>
+    <\ornamented>
+      <surround|<paragraph|tl;dr:>||<arg|body>>
+    </ornamented>
+  </with>>>
+
+  -- FIXME: color is not applied to the border if this is used inside a
+  marginal note, so we use the ornament variant instead. But that causes the
+  vertical placement not to respond.
+
+  <assign|tldr-table|<macro|body|<with|color|<value|aai-color>|<block|<tformat|<cwith|1|1|1|1|cell-tborder|0.5ln>|<cwith|1|1|1|1|cell-bborder|0.5ln>|<cwith|1|1|1|1|cell-lborder|0.5ln>|<cwith|1|1|1|1|cell-rborder|0.5ln>|<twith|table-width|<value|marginal-figure-width>>|<twith|table-hmode|exact>|<cwith|1|1|1|1|cell-hyphen|t>|<table|<row|<\cell>
+    <with|color|black|<strong|tl;dr: ><arg|body>>
+  </cell>>>>>>>>
+
+  <assign|marginal-tldr|<macro|body|<\marginal-note*|normal|c>
+    <\with|par-mode|justify>
+      <tldr|<arg|body>>
+    </with>
+  </marginal-note*>>>
 
   <assign|dfn|<macro|body|<strong|<arg|body>>>>
 
@@ -167,7 +207,7 @@
     </src-comment>
   </active*>
 
-  <assign|render-marginal-figure|<macro|type|name|fig|cap|<tabular*|<tformat|<cwith|1|-1|1|-1|cell-lsep|0spc>|<cwith|1|-1|1|-1|cell-rsep|0spc>|<cwith|2|2|1|1|cell-height|0.5fn>|<twith|table-valign|B>|<cwith|3|3|1|1|cell-hyphen|t>|<twith|table-width|50mm>|<twith|table-hmode|min>|<cwith|1|1|1|1|cell-halign|c>|<cwith|1|1|1|1|cell-lsep|0spc>|<cwith|1|1|1|1|cell-rsep|0spc>|<table|<row|<cell|<arg|fig>>>|<row|<cell|>>|<row|<\cell>
+  <assign|render-marginal-figure|<macro|type|name|fig|cap|<tabular*|<tformat|<cwith|1|-1|1|-1|cell-lsep|0spc>|<cwith|1|-1|1|-1|cell-rsep|0spc>|<cwith|2|2|1|1|cell-height|0.5fn>|<twith|table-valign|B>|<cwith|3|3|1|1|cell-hyphen|t>|<twith|table-width|<value|marginal-figure-width>>|<twith|table-hmode|min>|<cwith|1|1|1|1|cell-halign|c>|<cwith|1|1|1|1|cell-lsep|0spc>|<cwith|1|1|1|1|cell-rsep|0spc>|<table|<row|<cell|<arg|fig>>>|<row|<cell|>>|<row|<\cell>
     <\html-div-class|caption>
       <small|<\surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>|>
         <arg|cap>
