@@ -36,9 +36,15 @@
 
   <assign|appliedai-logo|<macro|width|<image|<find-file|$TEXMACS_HOME_PATH/plugins/transferlab/packages/transferlab/appliedai-pantone-positive-uncoated.pdf>|<arg|width>|||>>>
 
+  \;
+
   <assign|aai-color|#00747b>
 
   <assign|aai-color-light|#1c9b90>
+
+  <assign|locus-color|<value|aai-color>>
+
+  <assign|visited-color|<value|aai-color>>
 
   \;
 
@@ -86,10 +92,6 @@
 
   <assign|math-font|math-dejavu>
 
-  <assign|locus-color|#00747b>
-
-  <assign|visited-color|#00747b>
-
   <\active*>
     <\src-comment>
       Abstracts, tl;drs and other markup
@@ -97,7 +99,7 @@
   </active*>
 
   <assign|render-abstract|<\macro|body>
-    <\surround|<no-indent>|>
+    <\surround|<no-indent>|<vspace|2em>>
       <\small>
         <em|<arg|body>>
       </small>
@@ -106,7 +108,7 @@
 
   <assign|tldr|<macro|body|<\with|ornament-shape|classic|ornament-vpadding|2spc|ornament-hpadding|2spc|ornament-border|0.5ln|ornament-sunny-color|<value|aai-color>|ornament-shadow-color|<value|aai-color>>
     <\ornamented>
-      <surround|<paragraph|tl;dr:>||<arg|body>>
+      <surround|<strong|tl;dr: >||<arg|body>>
     </ornamented>
   </with>>>
 
@@ -118,11 +120,17 @@
     <with|color|black|<strong|tl;dr: ><arg|body>>
   </cell>>>>>>>>
 
-  <assign|marginal-tldr|<macro|body|<\marginal-note*|normal|c>
-    <\with|par-mode|justify>
-      <tldr|<arg|body>>
+  -- FIXME: this will not display if inlined! (but for a while it did (??))
+
+  <assign|marginal-tldr|<\macro|body>
+    <\with|marginal-note-flag-text|tl;dr|marginal-note-flag-color|orange>
+      <\marginal-note*|normal|c>
+        <\with|par-mode|justify>
+          <tldr|<arg|body>>
+        </with>
+      </marginal-note*>
     </with>
-  </marginal-note*>>>
+  </macro>>
 
   <assign|dfn|<macro|body|<strong|<arg|body>>>>
 
@@ -154,14 +162,14 @@
   </active*>
 
   <assign|render-big-figure|<\macro|type|name|fig|cap>
-    <surround|<vspace*|<value|figure-top-sep>><marginal-note*|normal|c|<small|<html-div-class|caption|<surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>||<arg|cap>>>>>|<vspace|<value|figure-bot-sep>>|<center|<arg|fig>>>
+    <surround|<vspace*|<value|figure-top-sep>><with|marginal-note-flag||<marginal-note*|normal|c|<small|<html-div-class|caption|<surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>||<arg|cap>>>>>>|<vspace|<value|figure-bot-sep>>|<center|<arg|fig>>>
   </macro>>
 
-  <assign|doc-title|<macro|x|<\surround|<marginal-note*|normal|b|<shift|<appliedai-logo|200pt>|-7.5mm|10mm>>|<vspace|0.5fn>>
+  <assign|doc-title|<macro|x|<\surround|<with|marginal-note-flag||<marginal-note*|normal|b|<shift|<appliedai-logo|200pt>|-7.5mm|10mm>>>|<vspace|0.5fn>>
     <doc-title-block|<font-magnify|1.412|<with|font-family|ss|font-series|bold|<arg|x>>>>
   </surround>>>
 
-  <assign|dfn*|<macro|body|<dfn|<arg|body>><marginal-note*|normal|c|<em|<arg|body>>>>>
+  <assign|dfn*|<macro|body|<dfn|<arg|body>><with|marginal-note-flag|<flag|dfn|green>|<marginal-note*|normal|c|<em|<arg|body>>>>>>
 
   <\active*>
     <\src-comment>
@@ -215,11 +223,12 @@
     </html-div-class>
   </cell>>>>>>>
 
-  <assign|marginal-figure|<macro|vpos|body|caption|<surround|<compound|next-figure>||<marginal-note*|normal|<arg|vpos>|<render-marginal-figure|figure|<compound|figure-text>
-  <compound|the-figure>|<arg|body>|<surround|<set-binding|<compound|the-figure>>||<arg|caption>>>>>>>
+  <assign|marginal-figure|<macro|vpos|body|caption|<surround|<compound|next-figure>||<with|marginal-note-flag|<flag|<merge|Fig
+  |<compound|the-figure>>|dark green>|<marginal-note*|normal|<arg|vpos>|<render-marginal-figure|figure|<compound|figure-text>
+  <compound|the-figure>|<arg|body>|<surround|<set-binding|<compound|the-figure>>||<arg|caption>>>>>>>>
 
-  <assign|marginal-figure*|<macro|vpos|body|caption|<marginal-note*|normal|<arg|vpos>|<with|figure-sep||<render-marginal-figure||<compound|figure-text>.
-  |<arg|body>|<arg|caption>>>>>>
+  <assign|marginal-figure*|<macro|vpos|body|caption|<with|marginal-note-flag-text|figure|<marginal-note*|normal|<arg|vpos>|<with|figure-sep||<render-marginal-figure||<compound|figure-text>.
+  |<arg|body>|<arg|caption>>>>>>>
 </body>
 
 <\initial>
