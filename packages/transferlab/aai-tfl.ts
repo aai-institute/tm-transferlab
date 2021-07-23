@@ -138,6 +138,10 @@
 
   <assign|dfn|<macro|body|<strong|<arg|body>>>>
 
+  -- Omit paragraphs from the TOC
+
+  <assign|paragraph|<macro|title|<with-toc|none|<assign|paragraph-numbered|<compound|paragraph-display-numbers>><assign|paragraph-prefix|<macro|<compound|the-paragraph>.>><compound|next-paragraph><compound|paragraph-clean><compound|paragraph-header|<arg|title>><compound|paragraph-toc|<arg|title>><if|<value|paragraph-numbered>|<compound|paragraph-numbered-title|<arg|title>>|<compound|paragraph-unnumbered-title|<arg|title>>>>>>
+
   <\active*>
     <\src-comment>
       Numbered marginal notes
