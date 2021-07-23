@@ -1,4 +1,4 @@
-<TeXmacs|1.99.20>
+<TeXmacs|2.1>
 
 <style|tmdoc>
 
@@ -60,6 +60,12 @@
     <item>A <markup|wide-figure> macro extending beyond the body of the text
     to occupy the full width of the page, minus the exterior margins, and an
     unnumbered <markup|wide-figure*> variant.
+
+    <item>Custom TOC title and spacing for usage inside a
+    <markup|marginal-note*>. Use with <explain-macro|marginal-note*|normal|c|<explain-macro|table-of-contents|toc|>>
+    placed inside the abstract (if you do, you will have to surround it by an
+    <markup|em> tag to avoid the TOC from displaying emphasized like the
+    abstract).
   </itemize-dot>
 
   <section|Known issues>
