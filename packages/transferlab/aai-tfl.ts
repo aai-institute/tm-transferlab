@@ -20,7 +20,7 @@
     </src-license>
   </src-title>>
 
-  <use-package|acmlarge|smart-ref|preview-ref>
+  <use-package|acmart|smart-ref|preview-ref>
 
   <\active*>
     <\src-comment>
