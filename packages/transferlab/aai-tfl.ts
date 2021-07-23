@@ -1,4 +1,4 @@
-<TeXmacs|1.99.21>
+<TeXmacs|2.1>
 
 <style|source>
 
@@ -26,7 +26,7 @@
     <\src-comment>
       Basic configuration variables and common defaults
 
-      All pages have 25mm margins at both side. Odd pages have an additional
+      All pages have 25mm margins at both sides. Odd pages have an additional
       75mm to the right and even pages to the left. This extra space is used
       by marginal notes and figures.
     </src-comment>
@@ -84,6 +84,8 @@
 
   <assign|figure-bot-sep|1.7bls>
 
+  <assign|marginal-par-sep|0.11fn>
+
   <assign|par-par-sep|0.5fn>
 
   <assign|page-odd-footer|<move|<transferlab-logo|120pt>|380pt|>>
@@ -91,6 +93,8 @@
   <assign|font-base-size|11>
 
   <assign|math-font|math-dejavu>
+
+  <assign|very-small|<macro|body|<with|font-size|0.78|<arg|body>>>>
 
   <\active*>
     <\src-comment>
@@ -145,13 +149,13 @@
   <new-counter|marginal-note> -- Probably should use add-to-counter-group
   std-env
 
-  <assign|display-marginal-note|<macro|nr|<em|<rsup|<arg|nr>>>>> -- An
-  unfortunate name...
+  <assign|display-marginal-note|<macro|nr|<small|<em|<rsup|<arg|nr>>>>>> --
+  An unfortunate name...
 
-  <assign|marginal-note|<macro|hpos|vpos|body|<surround|<inc-marginal-note><the-marginal-note>||<with|dummy1|<value|marginal-note-width>|dummy2|<value|marginal-note-sep>|<compound|<merge|marginal-|<arg|hpos>|-note>|<arg|vpos>|<the-marginal-note>
-  <small|<arg|body>>|<arg|hpos>>>>>>
+  <assign|marginal-note|<macro|hpos|vpos|body|<surround|<inc-marginal-note><the-marginal-note>||<with|dummy1|<value|marginal-note-width>|dummy2|<value|marginal-note-sep>|par-sep|<value|marginal-par-sep>|<compound|<merge|marginal-|<arg|hpos>|-note>|<arg|vpos>|<the-marginal-note>
+  <very-small|<arg|body>>|<arg|hpos>>>>>>
 
-  <assign|marginal-note*|<macro|hpos|vpos|body|<with|dummy1|<value|marginal-note-width>|dummy2|<value|marginal-note-sep>|<compound|<merge|marginal-|<arg|hpos>|-note>|<arg|vpos>|<small|<arg|body>>|<arg|hpos>>>>>
+  <assign|marginal-note*|<macro|hpos|vpos|body|<with|dummy1|<value|marginal-note-width>|dummy2|<value|marginal-note-sep>|par-sep|<value|marginal-par-sep>|<compound|<merge|marginal-|<arg|hpos>|-note>|<arg|vpos>|<very-small|<arg|body>>|<arg|hpos>>>>>
 
   <drd-props|marginal-note*|arity|3|accessible|none>
 
@@ -236,7 +240,6 @@
     <associate|global-author|Miguel de Benito Delgado>
     <associate|global-subject|>
     <associate|global-title|Macros for the TransferLab>
-    <associate|page-medium|paper>
-    <associate|src-special|normal>
+    <associate|page-medium|papyrus>
   </collection>
 </initial>
