@@ -4,7 +4,7 @@
 
 <\body>
   <active*|<\src-title>
-    <src-package|aai-tfl|0.6>
+    <src-package|aai-tfl|0.7>
 
     <\src-purpose>
       A tufte-like style for appliedAI's TransferLab
@@ -178,6 +178,15 @@
   </surround>>>
 
   <assign|dfn*|<macro|body|<dfn|<arg|body>><with|marginal-note-flag|<flag|dfn|green>|<marginal-note*|normal|c|<em|<arg|body>>>>>>
+
+  -- Tweaks to TOC, use with marginal-note*. To do: marginal-toc macro (won't
+  work for some reason)
+
+  <assign|table-of-contents-text|<macro|<htab|10mm><with|font-size|1.1|<localize|Contents>><htab|5mm><vspace|0.5fn>>>
+
+  <assign|toc-strong-1|<macro|left|right|<with|font-series|bold|math-font-series|bold|font-size|1.19|<arg|left>><toc-dots><no-break><arg|right><vspace|0.4fn>>>
+
+  <assign|toc-strong-2|<macro|left|right|<vspace*|0.25fn><with|font-series|bold|math-font-series|bold|<arg|left>><toc-dots><no-break><arg|right><vspace|0.25fn>>>
 
   <\active*>
     <\src-comment>
