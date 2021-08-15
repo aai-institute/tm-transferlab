@@ -4,7 +4,7 @@
 
 <\body>
   <active*|<\src-title>
-    <src-package|aai-tfl|0.7>
+    <src-package|aai-tfl|0.8>
 
     <\src-purpose>
       A tufte-like style for appliedAI's TransferLab
@@ -140,7 +140,10 @@
 
   -- Omit paragraphs from the TOC
 
-  <assign|paragraph|<macro|title|<with-toc|none|<assign|paragraph-numbered|<compound|paragraph-display-numbers>><assign|paragraph-prefix|<macro|<compound|the-paragraph>.>><compound|next-paragraph><compound|paragraph-clean><compound|paragraph-header|<arg|title>><compound|paragraph-toc|<arg|title>><if|<value|paragraph-numbered>|<compound|paragraph-numbered-title|<arg|title>>|<compound|paragraph-unnumbered-title|<arg|title>>>>>>
+  <assign|notoc|<macro|body|<flag|no toc|pastel
+  blue><with-toc|none|<arg|body>>>>
+
+  <assign|paragraph|<macro|title|<notoc|<assign|paragraph-numbered|<compound|paragraph-display-numbers>><assign|paragraph-prefix|<macro|<compound|the-paragraph>.>><compound|next-paragraph><compound|paragraph-clean><compound|paragraph-header|<arg|title>><compound|paragraph-toc|<arg|title>><if|<value|paragraph-numbered>|<compound|paragraph-numbered-title|<arg|title>>|<compound|paragraph-unnumbered-title|<arg|title>>>>>>
 
   <\active*>
     <\src-comment>
