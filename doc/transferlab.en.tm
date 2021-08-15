@@ -66,6 +66,10 @@
     placed inside the abstract (if you do, you will have to surround it by an
     <markup|em> tag to avoid the TOC from displaying emphasized like the
     abstract).
+
+    <item>A <markup|notoc> macro to hide content from the table of contents.
+    Use e.g. for \ sub-subsections to avoid too many levels in the marginal
+    TOC.
   </itemize-dot>
 
   <section|Known issues>
@@ -105,6 +109,7 @@
 
 <\initial>
   <\collection>
+    <associate|markdown-auto-export|../README.md>
     <associate|page-medium|papyrus>
   </collection>
 </initial>
