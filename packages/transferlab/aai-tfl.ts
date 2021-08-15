@@ -78,7 +78,7 @@
 
   <assign|marginal-note-width|48mm>
 
-  <assign|marginal-figure-width|50mm>
+  <assign|marginal-figure-width|56mm>
 
   <assign|figure-top-sep|1.5bls>
 
