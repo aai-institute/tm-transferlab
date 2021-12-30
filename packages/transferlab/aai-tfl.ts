@@ -159,7 +159,7 @@
   <assign|display-marginal-note|<macro|nr|<small|<em|<rsup|<arg|nr>>>>>> --
   An unfortunate name...
 
-  <assign|marginal-note|<macro|hpos|vpos|body|<surround|<inc-marginal-note><the-marginal-note>||<with|dummy1|<value|marginal-note-width>|dummy2|<value|marginal-note-sep>|par-sep|<value|marginal-par-sep>|<compound|<merge|marginal-|<arg|hpos>|-note>|<arg|vpos>|<the-marginal-note>
+  <assign|marginal-note|<macro|hpos|vpos|body|<surround|<inc-marginal-note><the-marginal-note><set-binding|<marginal-note-nr>>||<with|dummy1|<value|marginal-note-width>|dummy2|<value|marginal-note-sep>|par-sep|<value|marginal-par-sep>|<compound|<merge|marginal-|<arg|hpos>|-note>|<arg|vpos>|<the-marginal-note>
   <very-small|<arg|body>>|<arg|hpos>>>>>>
 
   <assign|marginal-note*|<macro|hpos|vpos|body|<with|dummy1|<value|marginal-note-width>|dummy2|<value|marginal-note-sep>|par-sep|<value|marginal-par-sep>|<compound|<merge|marginal-|<arg|hpos>|-note>|<arg|vpos>|<very-small|<arg|body>>|<arg|hpos>>>>>
