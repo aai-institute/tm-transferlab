@@ -174,6 +174,14 @@
 
   <drd-props|marginal-note*|arity|3|accessible|none>
 
+  -- For smart-ref:
+
+  <assign|margin-ref|<xmacro|args|<extern|ext-typed-ref|Note|<quote-arg|args>>>>
+
+  <assign|marg-ref|<xmacro|args|<extern|ext-typed-ref|Note|<quote-arg|args>>>>
+
+  <assign|mnote-ref|<xmacro|args|<extern|ext-typed-ref|Note|<quote-arg|args>>>>
+
   <\active*>
     <\src-comment>
       Redefinitions of standard markup to use the additional margin
