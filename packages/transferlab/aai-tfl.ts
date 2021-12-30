@@ -145,6 +145,14 @@
 
   <assign|paragraph|<macro|title|<notoc|<assign|paragraph-numbered|<compound|paragraph-display-numbers>><assign|paragraph-prefix|<macro|<compound|the-paragraph>.>><compound|next-paragraph><compound|paragraph-clean><compound|paragraph-header|<arg|title>><compound|paragraph-toc|<arg|title>><if|<value|paragraph-numbered>|<compound|paragraph-numbered-title|<arg|title>>|<compound|paragraph-unnumbered-title|<arg|title>>>>>>
 
+  <assign|quotation|<\macro|body>
+    <\padded>
+      <\indent-both|<value|quote-left-indentation>|<value|quote-right-indentation>>
+        <surround|<yes-indent>||<em|<arg|body>>>
+      </indent-both>
+    </padded>
+  </macro>>
+
   <\active*>
     <\src-comment>
       Numbered marginal notes
