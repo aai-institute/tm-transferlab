@@ -9,7 +9,7 @@ Clone this repository into `$TEXMACS_HOME_PATH/plugins` as `transferlab`. For
 Linux and MacOS this path is typically `~/.TeXmacs/plugins`:
 
 ```shell
-git clone https://github.com/texmacs/transferlab.git 
+git clone https://github.com/appliedAI-Initiative/tm-transferlab.git 
 ~/.TeXmacs/plugins/transferlab
 ```
 
