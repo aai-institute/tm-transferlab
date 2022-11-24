@@ -32,9 +32,9 @@
     </src-comment>
   </active*>
 
-  <assign|transferlab-logo|<macro|width|<image|<find-file|$TEXMACS_HOME_PATH/plugins/transferlab/packages/transferlab/transferlab.eps>|<arg|width>|||>>>
+  <assign|transferlab-logo|<macro|width|<image|<find-file|$TEXMACS_HOME_PATH/plugins/transferlab/packages/transferlab/transferlab.pdf>|<arg|width>|||>>>
 
-  <assign|appliedai-logo|<macro|width|<image|<find-file|$TEXMACS_HOME_PATH/plugins/transferlab/packages/transferlab/appliedai-pantone-positive-uncoated.pdf>|<arg|width>|||>>>
+  <assign|appliedai-logo|<macro|width|<image|<find-file|$TEXMACS_HOME_PATH/plugins/transferlab/packages/transferlab/appliedai-institute.pdf>|<arg|width>|||>>>
 
   \;
 
@@ -192,7 +192,7 @@
     <surround|<vspace*|<value|figure-top-sep>><with|marginal-note-flag||<marginal-note*|normal|c|<small|<html-div-class|caption|<surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>||<arg|cap>>>>>>|<vspace|<value|figure-bot-sep>>|<center|<arg|fig>>>
   </macro>>
 
-  <assign|doc-title|<macro|x|<\surround|<with|marginal-note-flag||<marginal-note*|normal|b|<shift|<appliedai-logo|200pt>|-7.5mm|10mm>>>|<vspace|0.5fn>>
+  <assign|doc-title|<macro|x|<\surround|<with|marginal-note-flag||<marginal-note*|normal|b|<shift|<appliedai-logo|200pt>|-15mm|10mm>>>|<vspace|0.5fn>>
     <doc-title-block|<font-magnify|1.412|<with|font-family|ss|font-series|bold|<arg|x>>>>
   </surround>>>
 
