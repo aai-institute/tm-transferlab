@@ -148,7 +148,7 @@
   <assign|quotation|<\macro|body>
     <\padded>
       <\indent-both|<value|quote-left-indentation>|<value|quote-right-indentation>>
-        <surround|<yes-indent>||<em|<arg|body>>>
+        <em|<arg|body>>
       </indent-both>
     </padded>
   </macro>>
@@ -175,6 +175,8 @@
   <drd-props|marginal-note*|arity|3|accessible|none>
 
   -- For smart-ref:
+
+  <assign|side-ref|<xmacro|args|<extern|ext-typed-ref|Note|<quote-arg|args>>>>
 
   <assign|margin-ref|<xmacro|args|<extern|ext-typed-ref|Note|<quote-arg|args>>>>
 
