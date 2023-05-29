@@ -61,6 +61,12 @@
   (wrap-selection-small
     (insert-go-to `(inactive (marginal-figure "c" "" "")) '(0 1 0))))
 
+(tm-define (slide-insert-title t)
+  (:require (in? "tfl-beamer" (get-style-list)))
+  (and-with u (slide-get-document t)
+    (tree-insert u 0 '((tit "" "")))
+    (tree-go-to u 0 0 0)))
+
 (tm-define (make-wide-figure)
   (:synopsis "Insert a numbered wide figure.")
   (wrap-selection-small
