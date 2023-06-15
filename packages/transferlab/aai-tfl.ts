@@ -1,4 +1,4 @@
-<TeXmacs|2.1>
+<TeXmacs|2.1.2>
 
 <style|source>
 
@@ -88,7 +88,7 @@
 
   <assign|par-par-sep|0.5fn>
 
-  <assign|page-odd-footer|<move|<transferlab-logo|120pt>|380pt|>>
+  <assign|page-odd-footer|<shift|<transferlab-logo|140pt>|360pt|>>
 
   <assign|font-base-size|11>
 
@@ -194,7 +194,7 @@
     <surround|<vspace*|<value|figure-top-sep>><with|marginal-note-flag||<marginal-note*|normal|c|<small|<html-div-class|caption|<surround|<figure-name|<arg|name><figure-sep>><list-caption|<arg|type>|<arg|cap>>||<arg|cap>>>>>>|<vspace|<value|figure-bot-sep>>|<center|<arg|fig>>>
   </macro>>
 
-  <assign|doc-title|<macro|x|<\surround|<with|marginal-note-flag||<marginal-note*|normal|b|<shift|<appliedai-logo|200pt>|-15mm|10mm>>>|<vspace|0.5fn>>
+  <assign|doc-title|<macro|x|<\surround|<with|marginal-note-flag||<marginal-note*|normal|b|<shift|<appliedai-logo|180pt>|-5mm|5mm>>>|<vspace|0.5fn>>
     <doc-title-block|<font-magnify|1.412|<with|font-family|ss|font-series|bold|<arg|x>>>>
   </surround>>>
 
