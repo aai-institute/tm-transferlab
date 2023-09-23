@@ -37,7 +37,9 @@ menu item in `Insert -> Notes -> Unnumbered note`.
   left. This extra space is used by marginal notes.
 * Macros and accompanying scheme code for numbered marginal notes. When using 
   the package, `marginal-note` is numbered and `marginal-note\*` unnumbered. 
-  They are variants from each other so it is possible to switch easily.
+  They are variants from each other so it is possible to switch easily. As usual
+  the numbered variant is available in the menu. The unnumbered variant can be
+  chosen via the focus menu (search for "structured variants" in the manual).
 * Macros for figures completely contained in the margin: `marginal-figure` and 
   `marginal-figure\*`.
 * Placement of captions in the margin for the standard `big-figure` and 
