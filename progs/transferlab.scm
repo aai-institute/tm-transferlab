@@ -10,7 +10,8 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(texmacs-module (transferlab))
+(texmacs-module (transferlab)
+  (:use (dynamic fold-menu)))
 
 (define-group marginal-note-tag
   marginal-note marginal-note*)
