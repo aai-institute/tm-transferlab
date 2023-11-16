@@ -234,7 +234,7 @@
   </macro>>
 
   <assign|wide-figure|<\macro|body|caption>
-    <\surround|<no-indent><inc-figure>|>
+    <\surround|<no-indent><next-figure>|>
       <specific|even|<wide-figure-even|<arg|body>|<arg|caption>|
       <the-figure>>><specific|odd|<wide-figure-odd|<arg|body>|<arg|caption>|
       <the-figure>>><vphantom|<wide-figure-inner|<arg|body>|<arg|caption>|>>
@@ -261,7 +261,7 @@
     </html-div-class>
   </cell>>>>>>>
 
-  <assign|marginal-figure|<macro|vpos|body|caption|<surround|<compound|next-figure>||<with|marginal-note-flag|<flag|<merge|Fig
+  <assign|marginal-figure|<macro|vpos|body|caption|<surround|<next-figure>||<with|marginal-note-flag|<flag|<merge|Fig
   |<compound|the-figure>>|dark green>|<marginal-note*|normal|<arg|vpos>|<render-marginal-figure|figure|<compound|figure-text>
   <compound|the-figure>|<arg|body>|<surround|<set-binding|<compound|the-figure>>||<arg|caption>>>>>>>>
 
