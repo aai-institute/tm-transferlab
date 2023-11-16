@@ -153,6 +153,10 @@
     </padded>
   </macro>>
 
+  <assign|tfl-link|<macro|text|destination|<hugo-short|link|<arg|text>|<arg|destination>><specific|texmacs|<hlink|<arg|text>|<arg|destination>>>>>
+
+  <drd-props|tfl-link|arity|2|accessible|none>
+
   <\active*>
     <\src-comment>
       Numbered marginal notes
